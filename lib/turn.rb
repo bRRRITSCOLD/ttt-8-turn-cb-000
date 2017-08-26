@@ -37,3 +37,7 @@ def move(board, index, current_player = 'X')
   board[index] = current_player
 end
 
+# Define method to perform player's valid move (input)
+def turn(board)
+  puts "Please enter 1-9:"
+end
