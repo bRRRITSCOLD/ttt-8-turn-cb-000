@@ -37,7 +37,15 @@ def move(board, index, current_player = 'X')
   board[index] = current_player
 end
 
-# Define method to perform player's valid move (input)
+# Define method to receive player's chosen move (input)
 def turn(board)
   puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?(board, index)
+    move(board, index)
+    display_board(board)
+  else 
+    turn(board)
+  end
 end
